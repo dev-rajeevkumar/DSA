@@ -14,10 +14,10 @@ public:
         ListNode* temp=head;
         while(temp!=NULL&&temp->next!=NULL){
             int x=gcd(temp->val,temp->next->val);
-            ListNode* ab=new ListNode(x);
-            ab->next=temp->next;
-            temp->next=ab;
-            temp=ab->next;
+            ListNode* New=new ListNode(x);
+            New->next=temp->next;
+            temp->next=New;
+            temp=New->next;
         }
         return head;
     }
