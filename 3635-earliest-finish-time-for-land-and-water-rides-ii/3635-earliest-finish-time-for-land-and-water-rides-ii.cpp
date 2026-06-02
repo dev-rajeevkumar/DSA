@@ -1,19 +1,17 @@
 class Solution {
 public:
     int earliestFinishTime(vector<int>& landStartTime, vector<int>& landDuration, vector<int>& waterStartTime, vector<int>& waterDuration) {
-        vector<int> sumland;
-        vector<int> sumwater;
         int watermin=INT_MAX,landmin=INT_MAX;
         int ans=0;
         for(int i=0;i<landDuration.size();i++){
-            sumland.push_back(landStartTime[i]+landDuration[i]);
-            if(sumland[i]<landmin)
-                landmin=sumland[i];
+            int x=landStartTime[i]+landDuration[i];
+            if(x<landmin)
+                landmin=x;
         }
         for(int i=0;i<waterDuration.size();i++){
-            sumwater.push_back(waterStartTime[i]+waterDuration[i]);
-            if(sumwater[i]<watermin)
-                watermin=sumwater[i];
+            int y=waterStartTime[i]+waterDuration[i];
+            if(y<watermin)
+                watermin=y;
         }
         // for watermin 
         int ma=INT_MAX,mb=INT_MAX;
