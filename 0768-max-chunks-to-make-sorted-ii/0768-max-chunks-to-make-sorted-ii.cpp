@@ -1,12 +1,21 @@
 class Solution {
 public:
 bool check(vector<int>& arr,vector<int>& s,int a,int b){
-    vector<int> t;
-    for(int i=a;i<=b;i++)
-        t.push_back(s[i]);
-    sort(t.begin(), t.end());
+    if(a != b){
+        int val = s[b];
+        int pos = b;
+        for(int i=a;i<b;i++){
+            if(s[i] >= val){
+                pos = i;
+                break;
+            }
+        }
+        for(int i=b;i>pos;i--)
+            s[i] = s[i-1];
+        s[pos] = val;
+    }
     for(int i=a;i<=b;i++){
-        if(arr[i] != t[i-a])
+        if(arr[i] != s[i])
             return false;
     }
     return true;
