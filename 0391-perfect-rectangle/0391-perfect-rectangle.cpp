@@ -29,7 +29,7 @@ public:
     for(int i=0;i<u;i++){
         int up1=rectangles[i][0],up2=rectangles[i][2];
         int lay1=rectangles[i][1],lay2=rectangles[i][3];
-        for(int j=max(0,i-50);j<min(u,i+50);j++){
+        for(int j=max(0,i-3);j<min(u,i+3);j++){
             if(i==j)continue;
             int x1=rectangles[j][0],x2=rectangles[j][2];
             int y1=rectangles[j][1],y2=rectangles[j][3];
