@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<string> partitionString(string s) {
         vector<string> ans;
-        set<string> t;
+        unordered_set<string> t;
         string x="";
         for(int i=0;i<s.size();i++){
             x.push_back(s[i]);
