@@ -10,10 +10,23 @@ public:
     }
     string smallestPalindrome(string s) {
         int n=s.size();
-        string ans=s.substr(0,n/2);
+        vector<int> f(26,0);
+        for(char x:s)f[x-'a']++;
+        string ans="";
+        string mid="";
+        for(int i=0;i<26;i++){
+            if(f[i]%2==1){
+                mid.push_back(char('a'+i));
+            }
+            int x=f[i]/2;
+            while(x--){
+                ans.push_back(char('a'+i));
+            }
+            
+        }
+        
         sort(ans.begin(),ans.end());
         string ans2=reverse(ans);
-        if(n%2==1)ans+=s[n/2];
-        return ans+ans2;
+        return ans+mid+ans2;
     }
 };
