@@ -22,10 +22,7 @@ public:
             while(x--){
                 ans.push_back(char('a'+i));
             }
-            
         }
-        
-        sort(ans.begin(),ans.end());
         string ans2=reverse(ans);
         return ans+mid+ans2;
     }
