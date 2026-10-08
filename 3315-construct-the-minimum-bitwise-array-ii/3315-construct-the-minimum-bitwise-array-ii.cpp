@@ -4,7 +4,7 @@ public:
         vector<int> ans;
         for(int x:nums){
             int mini=x;
-            int n=max(0,x-10000);
+            int n=max(0,x-5000);
             for(int i=x;i>n;i--){
                 if((i|(i+1))==x){
                     mini=min(mini,i);
