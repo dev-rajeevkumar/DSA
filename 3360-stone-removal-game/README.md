@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/stone-removal-game">3360. Stone Removal Game</a></h2><h3>Easy</h3><hr><p>Alice and Bob are playing a game where they take turns removing stones from a pile, with <em>Alice going first</em>.</p>
+<h2><a href="https://leetcode.com/problems/stone-removal-game/?envType=daily-question&envId=2026-11-26">3360. Stone Removal Game</a></h2><h3>Easy</h3><hr><p>Alice and Bob are playing a game where they take turns removing stones from a pile, with <em>Alice going first</em>.</p>
 
 <ul>
 	<li>Alice starts by removing <strong>exactly</strong> 10 stones on her first turn.</li>
